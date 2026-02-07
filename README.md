@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cortex
 
-## Getting Started
+## Goal
+Build a functional knowledge base where I can create notes, link them together, organize with tags/folders, and search effectively. Should replace scattered text files and browser bookmarks.
 
-First, run the development server:
+## Tech Stack
+- **Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript
+- **Database**: PostgreSQL + Drizzle ORM
+- **UI**: shadcn/ui + TailwindCSS
+- **Editor**: Tiptap
+- **Deployment**: Netlify
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Core Features
+- Create/edit/delete notes with markdown
+- Organize with folders and tags
+- Wiki-style linking (`[[Note Title]]`)
+- Backlinks (what links to this note)
+- Full-text search
+- Syntax highlighting for code blocks
+- Auto-save
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Plan
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Week 1: Foundation
+- Initialize Next.js project
+- Set up PostgreSQL + Drizzle ORM
+- Create database schema
+- Build server actions for note CRUD
+- Basic UI layout and routing
+- shadcn/ui setup
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Week 2: Editor & Organization
+- Integrate Tiptap editor
+- Auto-save with debouncing
+- Folder management
+- Tag system
+- Filter notes by folder/tags
 
-## Learn More
+### Week 3: Linking & Search
+- Wiki-link parser
+- Link autocomplete
+- Backlinks calculation
+- Full-text search (PostgreSQL FTS)
+- Click links to navigate
 
-To learn more about Next.js, take a look at the following resources:
+### Week 4: Polish
+- Syntax highlighting
+- Keyboard shortcuts (Cmd+K, Cmd+N)
+- Loading/error states
+- Responsive design
+- Deploy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Todo
+- [ ] Project setup
+- [ ] Database schema
+- [ ] Note CRUD operations
+- [ ] Tiptap editor integration
+- [ ] Auto-save
+- [ ] Folders
+- [ ] Tags
+- [ ] Wiki-link parsing
+- [ ] Backlinks
+- [ ] PostgreSQL full-text search
+- [ ] Syntax highlighting
+- [ ] Keyboard shortcuts
+- [ ] Deploy
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## MVP Exclusions
+- Graph visualization
+- Browser extension
+- Real-time collaboration
+- Mobile app
+- Version history
+- AI features
